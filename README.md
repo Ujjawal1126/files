@@ -34,3 +34,20 @@ def extract_text_from_pdf(blob_service_connection_string, form_recognizer_key, f
         for sentence in doc['sentences']:
             print(sentence)
         print()
+
+
+
+        if __name__ == "__main__":
+    # Replace with your Azure Blob Storage connection string, Form Recognizer, and Text Analytics API keys and endpoints
+    blob_service_connection_string = "your_blob_service_connection_string"
+    form_recognizer_api_key = "your_form_recognizer_api_key"
+    form_recognizer_endpoint = "your_form_recognizer_endpoint"
+    text_analytics_api_key = "your_text_analytics_api_key"
+    text_analytics_endpoint = "your_text_analytics_endpoint"
+
+    # Replace with your container name and PDF blob name
+    container_name = "your_container_name"
+    blob_name = "your_pdf_blob_name.pdf"
+
+    # Call the function to extract text and summarize
+    extract_text_from_pdf(blob_service_connection_string, form_recognizer_api_key, form_recognizer_endpoint, text_analytics_api_key, text_analytics_endpoint, container_name, blob_name)
